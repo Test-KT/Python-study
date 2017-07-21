@@ -23,4 +23,27 @@ def my_power(x,n):
 
 
 
-print(2**100000000)
+# print(2**100000000)
+
+
+def add_end(L=[]):
+    L.append('END')
+    return L
+
+
+def add_end_None(L=None):
+    if L is None:
+        L=[]
+    L.append('END')
+    return L
+
+
+
+print(add_end([1,2,3]))
+
+print(add_end([1,2,3]))
+
+
+print(add_end_None())
+
+
