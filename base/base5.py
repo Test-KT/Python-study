@@ -33,3 +33,15 @@ list={'name':'lsl','age':24}
 
 person(**list)
 
+
+# 受限制的关键字函数
+
+def _person(name,*,age,city):
+    print('name:',name,age,city)
+
+
+
+_person('lsl',age=24,city='gz')
+
+
+# 参数有五种，可以灵活组合（必选参数、默认参数、可变参数（*arg）、命名关键字参数(**kw)、关键字参数(a,b,*,c,d)）
