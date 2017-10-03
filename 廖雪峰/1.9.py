@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#　高阶函数 map/reduce
+#　高阶函数 map/reduce/filter
 from functools import reduce
 
 def add(x,y,f):
@@ -30,6 +30,16 @@ def paseName(x):
 
 def pase2up(s):
     return s[0].upper()+s[1:]
+
+
+def fnn(x):
+    return x%2==0
+
+def not_empty(x):
+    if isinstance(x,int):
+        return x
+    else:   
+        return x and x.strip()
     
 if __name__ == '__main__':
     print(add(1,2,f))
@@ -47,7 +57,7 @@ if __name__ == '__main__':
 
     print(list(map(char2num,'1234s5a')))
 
-    print(reduce(fn,map(char2num,'12345')))
+    print(reduce(fn,filter(not_empty,map(char2num,'12s34s5'))))
 
     print('avc'.title())
 
@@ -56,3 +66,9 @@ if __name__ == '__main__':
 
 
     print(list(map(pase2up,['lsl','gzZ','sz'])))
+
+
+    print(list(filter(fnn,[1,2,3,4,5,6])))
+
+
+    print(list(filter(not_empty,[' a','','b',None,'  '])))
