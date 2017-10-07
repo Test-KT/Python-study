@@ -13,11 +13,15 @@ with open('/home/lsl/PycharmProjects/Python-study/廖雪峰/1.8.py','r') as f:
 
 print(os.name)
 print(os.path.abspath('.'))
-newpath=os.path.join(os.path.abspath('.'),'new')  
-try:
-    os.mkdir(newpath)
-except FileExistsError as e:
+newpath=os.path.join(os.path.abspath('.'),'new')
+if os.path.exists(newpath):
     os.rmdir(newpath)
+else:
+    os.mkdir(newpath)
+# try:
+#     os.mkdir(newpath)
+# except FileExistsError as e:
+#     os.rmdir(newpath)
 
 print(os.path.split('/home/lsl/PycharmProjects/Python-study/廖雪峰/1.8.py'))
 print(os.path.splitext('/home/lsl/PycharmProjects/Python-study/廖雪峰/1.8.py'))
