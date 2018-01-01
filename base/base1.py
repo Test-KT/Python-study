@@ -14,4 +14,9 @@ def inputWe():
     else:
         print('严重肥胖')
 
-inputWe()
+
+
+
+
+if __name__ == '__main__':
+    inputWe()
